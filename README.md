@@ -13,39 +13,12 @@ Used the library is pyspark.mllib.
 Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data, (3) Sub_test data.
 
 
-## Compare the parameters
-"numIterations".  
+## Compare the parameters 
 Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 25. But the AUCs are similar, only little difference.
 ~~~
-    num_iterations_list = [1, 3, 5, 15, 25]
-    step_size_list = [100]
-    reg_param_list = [1]
+    lambda_param_list = [1.0, 3.0, 5.0, 15.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 60.0]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194394064-a366c96c-a1e4-481e-b00a-c67dfedf1357.png)
-
-
-
-"stepSize"
-Set the mum_iteration=25 and mini_batch_fraction=1, draw the graph for the stepSize. The AUC is the hightest when step_size is 100. But the AUCs are similar, only little difference.
-~~~
-    num_iterations_list = [25]
-    step_size_list = [10, 50, 100, 200]
-    reg_param_list = [1]
-~~~
-![image](https://user-images.githubusercontent.com/75282285/194394762-d2794c60-4b99-4449-8aa0-84af203e1118.png)
-
-
-
-"regParam".
-Set the num_iteration=25 and step_size=100, draw the graph for the miniBatchFraction. The AUC is the hightest when regParam is 1.
-~~~
-    num_iterations_list = [25]
-    step_size_list = [100]
-    reg_param_list = [0.01, 0.1, 1]
-~~~
-![image](https://user-images.githubusercontent.com/75282285/194395435-8e85c0a7-61bd-44ad-ba83-2732f2f67018.png)
-
-
+![image](https://user-images.githubusercontent.com/75282285/194414465-29fe7510-c5cc-4cc3-ab65-cafa6644b50f.png)
 
 
 # Stage2: Train and evaluate   
