@@ -3,7 +3,7 @@ Data is pubic.
 # Python_Spark_ML_NaiveBayes   
 
 
-Use SVM algorithm to machine learning, find the best mode to predict the validation of website.
+Use NaiveBeyes algorithm to machine learning, find the best mode to predict the validation of website.
 
 Running environment is Spark + Hadoop + PySpark    
 Used the algorithm is NavieBayes.     
