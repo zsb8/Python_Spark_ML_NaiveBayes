@@ -14,11 +14,11 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 
 
 ## Compare the parameters 
-Set the step_size=10 and reg_param=1, draw the graph for the numIterations. The AUC is the highest when num_iteration is 25. But the AUCs are similar, only little difference.
+Draw the graph for the numIterations. The AUC is the highest when lambadParam is 1. But the AUCs are similar, only little difference.
 ~~~
     lambda_param_list = [1.0, 3.0, 5.0, 15.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 60.0]
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194414465-29fe7510-c5cc-4cc3-ab65-cafa6644b50f.png)
+![image](https://user-images.githubusercontent.com/75282285/194415461-55b6b713-f8d0-4270-bb27-bf934dc2c02f.png)
 
 
 # Stage2: Train and evaluate   
@@ -26,14 +26,14 @@ Created the model using train data set.
 Calculated the AUC using validation data set.
 Sorted the metrics.    
 Found the best parameters includ the best AUC and the best model.   
-![image](https://user-images.githubusercontent.com/75282285/194396120-13d6c770-5c42-415f-b3a6-f913cd98c406.png)
+![image](https://user-images.githubusercontent.com/75282285/194415598-5c0fcd28-e22e-475e-9e47-644fb7939240.png)
 
 
 
 # Stage3: Test
 Used the sub_test data set and the best model to calculate the AUC. If testing AUC is similare as the best AUC, it is OK.
 As the result, the best AUC is  0.6605, use the test data set to calcuate AUC is 0.6630, the difference is 0.0025, so it has not overfitting issue. 
-![image](https://user-images.githubusercontent.com/75282285/194395839-faba8d2d-fe4e-4f33-bc97-1afd1d4374b8.png)
+![image](https://user-images.githubusercontent.com/75282285/194415537-55f165d1-686f-402e-b690-a799f38347eb.png)
 
 
 
@@ -55,7 +55,8 @@ def predict_data(best_model):
         result_predict = best_model.predict(data[1])
         print(f"web:{data[0]}, \n predict:{result_predict}, desc: {dic_desc[result_predict]}")
 ~~~
-![image](https://user-images.githubusercontent.com/75282285/194396279-6878ae32-fff0-4418-a592-f561795f1002.png)
+![image](https://user-images.githubusercontent.com/75282285/194415722-0d557064-afcc-4e95-88cf-a7e482fcc5e7.png)
+
 
 
 # Spark monitor
