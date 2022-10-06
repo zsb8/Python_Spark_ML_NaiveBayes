@@ -61,8 +61,7 @@ def predict_data(best_model):
 
 # Spark monitor
 http://node1:4040/jobs/
-![image](https://user-images.githubusercontent.com/75282285/194400341-b94d79be-897e-49ab-82a7-6007a9a4c524.png)  
-![image](https://user-images.githubusercontent.com/75282285/194401311-8d34a31b-6a6d-4c84-86d6-aec699421138.png)
+![image](https://user-images.githubusercontent.com/75282285/194416391-4b6e3eb8-c9af-471c-b544-1f48b89e2caa.png)
 
 http://node1:8080/
-![image](https://user-images.githubusercontent.com/75282285/194397049-f87a9560-a343-49ea-8c22-dc557dda6de7.png)
+![image](https://user-images.githubusercontent.com/75282285/194416117-483a554f-0f67-4205-a1dc-7f2343e6f3f4.png)
