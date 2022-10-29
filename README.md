@@ -15,7 +15,7 @@ Placed the tsv on hadoop. Built 3 data sets: (1) Train data, (2) Validation data
 
 ## Compare the parameters 
 Draw the graph for the numIterations. The AUC is the highest when lambadParam is 1. But the AUCs are similar, only little difference.
-~~~
+~~~python
     lambda_param_list = [1.0, 3.0, 5.0, 15.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 60.0]
 ~~~
 ![image](https://user-images.githubusercontent.com/75282285/194415461-55b6b713-f8d0-4270-bb27-bf934dc2c02f.png)
@@ -39,7 +39,7 @@ As the result, the best AUC is  0.6605, use the test data set to calcuate AUC is
 
 # Stage4: Predict
 Use the test data (in Hadoop, test.tsv) and the model (calculated after Stage2) to predict.
-~~~
+~~~python
 def predict_data(best_model):
     raw_data_with_header = sc.textFile(path + "test.tsv")
     header = raw_data_with_header.first()
