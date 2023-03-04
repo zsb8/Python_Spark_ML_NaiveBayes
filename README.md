@@ -1,4 +1,5 @@
-This a sample code, not really business code. I won't expose the company's code. Data is pubic.   
+This is a sample code and not actual business code. Therefore, I cannot share the company's proprietary code. <br>
+However, the data used in this sample code is publicly available. <br>
 
 # Python_Spark_ML_NaiveBayes   
 
